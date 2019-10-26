@@ -16,5 +16,10 @@ namespace RegisztracioAlkalmazas
         {
             InitializeComponent();
         }
+
+        private void ButtonHozzaAad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
