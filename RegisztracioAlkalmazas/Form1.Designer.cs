@@ -117,6 +117,7 @@
             // radioButtonF
             // 
             this.radioButtonF.AutoSize = true;
+            this.radioButtonF.Checked = true;
             this.radioButtonF.Location = new System.Drawing.Point(90, 98);
             this.radioButtonF.Name = "radioButtonF";
             this.radioButtonF.Size = new System.Drawing.Size(31, 17);
@@ -173,6 +174,7 @@
             this.buttonBetoltes.TabIndex = 13;
             this.buttonBetoltes.Text = "Betöltés";
             this.buttonBetoltes.UseVisualStyleBackColor = true;
+            this.buttonBetoltes.Click += new System.EventHandler(this.ButtonBetoltes_Click);
             // 
             // formRegisztracio
             // 
@@ -193,7 +195,9 @@
             this.Controls.Add(this.labelUjHobbi);
             this.Controls.Add(this.labelSzulDatum);
             this.Controls.Add(this.labelNev);
+            this.MaximizeBox = false;
             this.Name = "formRegisztracio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Regisztráció";
             this.ResumeLayout(false);
             this.PerformLayout();

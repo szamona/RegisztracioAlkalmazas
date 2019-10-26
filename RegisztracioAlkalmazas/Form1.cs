@@ -20,8 +20,11 @@ namespace RegisztracioAlkalmazas
 
         private void ButtonHozzaAad_Click(object sender, EventArgs e)
         {
-            listBoxKedvencHobbi.Items.Add(textUjHobbi.Text);
-            textUjHobbi.Text = "";
+            if (textUjHobbi.Text != "")
+            {
+                listBoxKedvencHobbi.Items.Add(textUjHobbi.Text);
+                textUjHobbi.Text = "";
+            }
         }
 
         private void ButtonMentes_Click(object sender, EventArgs e)
@@ -30,7 +33,7 @@ namespace RegisztracioAlkalmazas
 
             if (textNev.Text !="")
             {
-                urlap.Write(textNev.Text);
+                urlap.Write(textNev.Text +"; ");
             }
             else
             {
@@ -38,13 +41,36 @@ namespace RegisztracioAlkalmazas
             }
             if (textSzulDatum.Text != "")
             {
-                urlap.Write(textSzulDatum.Text);
+                urlap.Write(textSzulDatum.Text+"; ");
             }
             else
             {
                 MessageBox.Show("Nem adott meg születési dátumot!");
             }
+            if (radioButtonF.Checked==true)
+            {
+                urlap.Write("Férfi; ");
+            }
+            if (radioButtonN.Checked == true)
+            {
+                urlap.Write("Nő; ");
+            }
+            urlap.Write(listBoxKedvencHobbi.SelectedItem+"");
+            urlap.Close();
+        }
 
+        private void ButtonBetoltes_Click(object sender, EventArgs e)
+        {
+            foreach (var sor in File.ReadAllLines("urlap.txt"))
+            {
+                string[] st = sor.Split(';');
+                textNev.Text = st[0];
+                textSzulDatum.Text = st[1];
+                if ()
+                {
+
+                }
+            }
         }
     }
 }
