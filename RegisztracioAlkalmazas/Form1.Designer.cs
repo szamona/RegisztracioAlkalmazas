@@ -148,38 +148,42 @@
             // 
             // buttonHozzaAad
             // 
+            this.buttonHozzaAad.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonHozzaAad.Location = new System.Drawing.Point(239, 216);
             this.buttonHozzaAad.Name = "buttonHozzaAad";
             this.buttonHozzaAad.Size = new System.Drawing.Size(75, 23);
             this.buttonHozzaAad.TabIndex = 11;
             this.buttonHozzaAad.Text = "Hozzáad";
-            this.buttonHozzaAad.UseVisualStyleBackColor = true;
+            this.buttonHozzaAad.UseVisualStyleBackColor = false;
             this.buttonHozzaAad.Click += new System.EventHandler(this.ButtonHozzaAad_Click);
             // 
             // buttonMentes
             // 
+            this.buttonMentes.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonMentes.Location = new System.Drawing.Point(158, 247);
             this.buttonMentes.Name = "buttonMentes";
             this.buttonMentes.Size = new System.Drawing.Size(75, 23);
             this.buttonMentes.TabIndex = 12;
             this.buttonMentes.Text = "Mentés";
-            this.buttonMentes.UseVisualStyleBackColor = true;
+            this.buttonMentes.UseVisualStyleBackColor = false;
             this.buttonMentes.Click += new System.EventHandler(this.ButtonMentes_Click);
             // 
             // buttonBetoltes
             // 
+            this.buttonBetoltes.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonBetoltes.Location = new System.Drawing.Point(239, 247);
             this.buttonBetoltes.Name = "buttonBetoltes";
             this.buttonBetoltes.Size = new System.Drawing.Size(75, 23);
             this.buttonBetoltes.TabIndex = 13;
             this.buttonBetoltes.Text = "Betöltés";
-            this.buttonBetoltes.UseVisualStyleBackColor = true;
+            this.buttonBetoltes.UseVisualStyleBackColor = false;
             this.buttonBetoltes.Click += new System.EventHandler(this.ButtonBetoltes_Click);
             // 
             // formRegisztracio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(333, 282);
             this.Controls.Add(this.buttonBetoltes);
             this.Controls.Add(this.buttonMentes);

@@ -25,6 +25,10 @@ namespace RegisztracioAlkalmazas
                 listBoxKedvencHobbi.Items.Add(textUjHobbi.Text);
                 textUjHobbi.Text = "";
             }
+            else
+            {
+                MessageBox.Show("Nem adott meg új hobbit!");
+            }
         }
 
         private void ButtonMentes_Click(object sender, EventArgs e)
@@ -66,10 +70,15 @@ namespace RegisztracioAlkalmazas
                 string[] st = sor.Split(';');
                 textNev.Text = st[0];
                 textSzulDatum.Text = st[1];
-                if ()
+                if (st[2]=="Férfi")
                 {
-
+                    radioButtonF.Checked = true;
                 }
+                else
+                {
+                    radioButtonN.Checked = true;
+                }
+                listBoxKedvencHobbi.Items.Add(st[3]);
             }
         }
     }
